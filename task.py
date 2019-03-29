@@ -24,3 +24,30 @@
 #
 #Delete these comments before commit!
 #Good luck.
+
+class Bank:
+    def __init__(self,bankName,userID,userPD,userAmount):
+        self.bankName=bankName
+        self.userID=userID
+        self.userPD=userPD
+        self.userAmount=userAmount
+    def cash_imput(self,imput_value):
+        self.userAmount=self.userAmount+imput_value
+    def cash_output(self,output_value):
+        self.userAmount=self.userAmount-output_value
+    def user_info(self):
+       return 'User:{} \t User amount:{} \t Bank:{} \n'.format(self.userID,self.userAmount,self.bankName)
+    #def transfer(self,value,):
+     #   if self.userAmount>value:
+      #      self.userAmount=self.userAmount-value
+
+        
+cata=Bank('Moldinkombank',2344,888,32)
+print(cata.user_info())
+cata.cash_imput(68)
+print(cata.user_info())
+cata.cash_output(55)
+print(cata.user_info())
+mary=Bank('Moldinkombank',1000,100,899)
+print(mary.user_info())
+#mary.transfer(33,cata.userAmount)
