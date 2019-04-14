@@ -67,8 +67,11 @@ class Bank:
     def printAllClients(self):
         for n in self.client_array:
             print('bank: {} \t client: {} \t amount: {}'.format(self.bank_name, n.name, n.amount))
-
-
+    def printClient(self,client_name):
+        for n in self.client_array:
+            if n.name == client_name:
+                print('bank: {} \t client: {} \t amount: {}'.format(self.bank_name, n.name, n.amount))
+            
 moldoinkombank = Bank('moldinkombank')
 moldoinkombank.newClient('Cata', 99)
 moldoinkombank.newClient('Marcel', 99)
@@ -89,3 +92,5 @@ moldoinkombank.printAllClients()
 victoriabank.transfer('Ion', 'Vasile', 1000)
 
 victoriabank.printAllClients()
+
+victoriabank.printClient('Ion')
